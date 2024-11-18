@@ -2,6 +2,8 @@ import sys  # provides func and variables that are used to manipulate diff parts
 import os
 from src.logger import logging
 
+
+
 def error_message_details(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()  # exc_tb give info:filename, line number of error
     file_name=exc_tb.tb_frame.f_code.co_filename
@@ -19,7 +21,9 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message
-    
+
+
+
 """
 if __name__=='__main__':
     try:
@@ -27,5 +31,4 @@ if __name__=='__main__':
     except Exception as e:
         logging.info("Divided by zero")
         raise CustomException(e,sys)
-
 """
